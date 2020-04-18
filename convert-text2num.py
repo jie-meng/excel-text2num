@@ -78,11 +78,11 @@ if __name__ == "__main__":
     print('please input source xlsx file path:')
     source = input().strip()
 
-    output_dir = '{0}/output'.format(scriptPath())
+    output_dir = '{0}/output'.format(os.path.abspath(os.getcwd()))
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    outputfile = '{0}/output/{1}'.format(scriptPath(), os.path.basename(source))
+    outputfile = '{0}/{1}'.format(output_dir, os.path.basename(source))
 
     process_workbook(source, outputfile)
 
