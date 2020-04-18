@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     process_workbook(source, outputfile)
 
-    print('\ndone!')
+    print('\noutput to {0}'.format(outputfile))
     print('\nPress any key to continue ...')
     input()
 
